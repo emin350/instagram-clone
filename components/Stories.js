@@ -2,6 +2,7 @@ import faker from 'faker';
 import { useEffect,useState } from "react"
 import Story from "./Story";
 import { useSession } from "next-auth/react";
+import { photo } from "../photos/photos";
 
 function Stories() {
     const [suggestions, setSuggestions] = useState([]);
@@ -25,14 +26,14 @@ setSuggestions(suggestions);
         ">
         {session && (
          <Story
-         img={session.user.image}
-         username={session.user.username} />
+         img={session?.user.image}
+         username={session?.user.username} />
 
         )}
-     {suggestions.map((profile) => (
+     {suggestions.map((profile, i) => (
          <Story 
          key={profile.id} 
-         img={profile.avatar} 
+         img={photo[i]} 
          username={profile.username}
          />
      ))}       

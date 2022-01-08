@@ -1,5 +1,6 @@
 import faker from "faker";
-import { useEffect,useState } from "react";
+import React,{ useEffect,useState } from "react";
+import { photo } from "../photos/photos";
 
 
 function Suggestions() {
@@ -25,7 +26,7 @@ useEffect( () => {
         </div> 
 
         {
-            suggestions.map((profile) =>(
+            suggestions.map((profile, i) =>(
           <div 
           key={profile.id} 
           className="flex items-center justify-between mt-3"
@@ -33,7 +34,7 @@ useEffect( () => {
               
         <img 
         className="w-10 h-10 rounded-full border p-[2px]"
-        src={profile.avatar} 
+        src={photo[i + 10]} 
         alt="" />
 
         <div className="flex-1 ml-4 ">
