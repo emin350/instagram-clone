@@ -78,7 +78,7 @@ function Header() {
                             </div>
                             <PlusCircleIcon 
                             onClick={() => setOpen(true)} 
-                            className="h-6 md:hidden cursor-pointer"/>
+                            className="navBtn"/>
                             <UserGroupIcon className="navBtn" />
                             <HeartIcon className="navBtn" />
 
