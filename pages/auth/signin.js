@@ -32,7 +32,6 @@ function signIn({ providers }) {
 </>
     );
 }
-
 //SERVER
 export async function getServerSideProps() {
     const providers = await getProviders();
