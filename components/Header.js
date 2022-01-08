@@ -89,7 +89,7 @@ const Header = () => {
               />
             </>
           ) : (
-            <button onClick={() => signIn()}>Giriş</button>
+            <button onClick={() => signIn()}>sign In</button>
           )}
         </div>
       </div>
